@@ -1,6 +1,8 @@
 <?php
-
 include $_SERVER ['DOCUMENT_ROOT'] . '/products.php';
+
+$product=$products[$_GET['id']];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +11,7 @@ include $_SERVER ['DOCUMENT_ROOT'] . '/products.php';
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="form.css" />
 	<title>Document</title>
 </head>
 <body>
@@ -17,16 +20,28 @@ include $_SERVER ['DOCUMENT_ROOT'] . '/products.php';
   		<li><a href="#">О нас</a></li>
 	</ul>
 	<div class="main">
-	<h3>Каталог</h3><br>
-	<?php foreach ($products as $id=>$product)
-	{?>
-		<figure>
+	<h3>Корзина</h3>
+	<p class="success">
+		Ваша покупка оформлена
+	</p>
+	<p class="error">
+		Нужно выбрать товар и заполнить все поля
+	</p>
+	<div class="items">
+	<figure>
 			<p><img src="<?=$product['img']?>" alt="" /></p>
 			<figcaption><?=$product['name']?></figcaption>
 			<figcaption><?=$product['Price']?></figcaption>
-			<a href="form.php/?id=<?=$id?>" class='btn'>Оформить</a>
-		</figure> <?php
-	}?>
+		</figure>
+	</div>
+	
+	<form action="">
+		<label>
+			Ваше ФИО:
+			<input type="text" placeholder="Введите ваше ФИО">
+		</label>
+		<input type="submit" value="Купить" class="btn">
+	</form>
 	</div>
 </body>
 </html>

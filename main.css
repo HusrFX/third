@@ -1,7 +1,54 @@
 img {
-	width: 40%;
-	height: 40%;
+	width: 50%;
+	height: 50%;
 }
-body{
-	padding: 20px;
+#navbar {
+	margin: 0;
+	padding-left: 50px;
+	padding-right: 50px;
+	list-style-type: none;
+	width: 100%;
+	text-align: left;
+	background-color: #525252;
+ }
+ #navbar li { display: inline; }
+ #navbar a {
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+ }
+ #navbar a:hover {
+	background-color: #69006d;
+ }
+ .main{
+	margin-left: 50px;
+	margin-right: 50px;
+ }
+figure {
+	background: #AAAAAA;
+	padding: 0;
+	margin-left: 4.1%; 
+	margin-right: 4.1%; 
+	display: block; 
+	width: 25%;
+	float: left;
+	text-align: center; 
+	align-content:center;
+  }
+  figcaption {
+	color: #fff; /* Цвет текста */
+  }
+  .btn {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 70%;
+	padding: 2%;
+	margin-bottom:5%;
 }
