@@ -24,7 +24,7 @@ include $_SERVER ['DOCUMENT_ROOT'] . '/products.php';
 			<p><img src="<?=$product['img']?>" alt="" /></p>
 			<figcaption><?=$product['name']?></figcaption>
 			<figcaption><?=$product['Price']?></figcaption>
-			<a href="form.php/?id=<?=$id?>" class='btn'>Оформить</a>
+			<a href="/form.php/?id=<?=$id?>" class='btn'>Оформить</a>
 		</figure> <?php
 	}?>
 	</div>
