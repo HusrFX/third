@@ -1,6 +1,7 @@
 <?php
 
 include $_SERVER['DOCUMENT_ROOT'] . '/template/header.php';
+
 $product=$products[$_REQUEST['id'] ?? 0];
 $success=false;
 $error=false;

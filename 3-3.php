@@ -1,6 +1,5 @@
 <?php
 
-include $_SERVER ['DOCUMENT_ROOT'] . '/products.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/template/header.php';
 ?>
 
