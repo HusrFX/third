@@ -1,7 +1,6 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/products.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/order.php';
 
+include $_SERVER['DOCUMENT_ROOT'] . '/template/header.php';
 $product=$products[$_REQUEST['id'] ?? 0];
 $success=false;
 $error=false;
@@ -20,23 +19,9 @@ if(! empty($_POST))
 		}
 	}
 }
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/main.css" />
-	<link rel="stylesheet" href="/error.css" />
-	<title>Document</title>
-</head>
-<body>
-	<ul id="navbar">
-  		<li><a href="/3-3.php">Главная</a></li>
-  		<li><a href="#">О нас</a></li>
-	</ul>
-	<div class="main">
+
 	<h3>Корзина</h3>
 	<?php if($success) {?>
 		<p class="success">
@@ -63,7 +48,5 @@ if(! empty($_POST))
 			<input type="text" name="name" placeholder="Введите ваше ФИО">
 		</label>
 		<input type="submit" value="Купить" class="btn">
-	</form><?php }?>
-	</div>
-</body>
-</html>
+	</form><?php }
+	include $_SERVER['DOCUMENT_ROOT'] . '/template/footer.php';?>
