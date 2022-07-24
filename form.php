@@ -8,7 +8,7 @@ $error=false;
 
 if(! empty($_POST))
 {
-	if(empty($_POST['name']) || empty($_POST['id']))
+	if(empty($_POST['name']) || strlen($_POST['id'])<=0)
 	{
 		$error=true;
 	}else{
@@ -46,7 +46,7 @@ if(! empty($_POST))
 		<input type="hidden" name="id" value="<?=$product['id']?>">
 		<label>
 			Ваше ФИО*:
-			<input type="text" name="name" placeholder="Введите ваше ФИО">
+			<input type="text" name="name" placeholder="Введите ваше ФИО" value="<?=htmlspecialchars($POST['name'] ?? '') ?>">
 		</label>
 		<input type="submit" value="Купить" class="btn">
 	</form><?php }
